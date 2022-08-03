@@ -1,11 +1,11 @@
 package lock
 
 import (
-	"context"
 	"fmt"
-	"github.com/go-redis/redis"
 	"testing"
 	"time"
+
+	"github.com/go-redis/redis"
 )
 
 func TestRedis(t *testing.T) {
@@ -20,7 +20,7 @@ func TestRedis(t *testing.T) {
 			DB:           0,
 		},
 	)
-	ping, err := GlobalClient.Ping(context.Background()).Result()
+	ping, err := GlobalClient.Ping().Result()
 	if nil != err {
 		panic(err)
 	}

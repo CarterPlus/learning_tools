@@ -1,11 +1,12 @@
 package main
 
 import (
-	"google.golang.org/grpc"
-	pr "learning_tools/grpc/server_side_streaming_rpc/proto"
 	"log"
 	"net"
 	"time"
+
+	pr "github.com/hwholiday/learning_tools/grpc/server_side_streaming_rpc/proto"
+	"google.golang.org/grpc"
 )
 
 type Server struct{}

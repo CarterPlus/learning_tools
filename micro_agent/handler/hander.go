@@ -1,8 +1,9 @@
 package handler
 
 import (
-	"micro_agent/model/user"
 	"sync"
+
+	"github.com/hwholiday/learning_tools/micro_agent/model/user"
 )
 
 var (

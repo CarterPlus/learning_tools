@@ -1,9 +1,9 @@
 package bitmap_filter
 
 import (
-	"context"
-	"github.com/go-redis/redis"
 	"hash/fnv"
+
+	"github.com/go-redis/redis"
 )
 
 type BitMapFilter struct {
@@ -20,7 +20,9 @@ func (b *BitMapFilter) Add(str string) error {
 	if err != nil {
 		return err
 	}
-	return b.conn.SetBit(context.Background(), b.key, key, 1).Err()
+	// return b.conn.SetBit(context.Background(), b.key, key, 1).Err()
+	print(key)
+	return nil
 }
 
 func (b *BitMapFilter) Exist(str string) (bool, error) {
@@ -28,7 +30,9 @@ func (b *BitMapFilter) Exist(str string) (bool, error) {
 	if err != nil {
 		return false, err
 	}
-	res, err := b.conn.GetBit(context.Background(), b.key, key).Result()
+	// res, err := b.conn.GetBit(context.Background(), b.key, key).Result()
+	print(key)
+	var res = 2
 	if err != nil {
 		return false, err
 	}

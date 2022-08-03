@@ -1,7 +1,7 @@
 package tool
 
 import (
-	"micro_agent/base/config"
+	"github.com/hwholiday/learning_tools/micro_agent/base/config"
 )
 
 func Init() {

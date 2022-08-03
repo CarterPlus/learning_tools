@@ -3,11 +3,11 @@ package ws
 import (
 	"errors"
 	"fmt"
-	"github.com/gorilla/websocket"
-	uuid "github.com/satori/go.uuid"
-	"learning_tools/websocket/gateway/msg"
 	"sync"
 	"time"
+
+	"github.com/gorilla/websocket"
+	"github.com/hwholiday/learning_tools/websocket/gateway/msg"
 )
 
 type WsConnection struct {
@@ -33,7 +33,7 @@ func NewWsConnection(conn *websocket.Conn) *WsConnection {
 	ws.writeChan = make(chan interface{}, 10)
 	ws.closeChan = make(chan bool)
 	ws.isOpen = true
-	ws.connId = uuid.NewV5(uuid.Must(uuid.NewV4()), "ws").String()
+	// ws.connId = uuid.NewV5(uuid.Must(uuid.NewV4()), "ws").String()
 	go ws.read()
 	go ws.send()
 	return ws

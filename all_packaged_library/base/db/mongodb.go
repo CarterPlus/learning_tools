@@ -2,11 +2,12 @@ package db
 
 import (
 	"context"
-	"file_storage/base/config"
-	"file_storage/base/tool"
+	"time"
+
+	"github.com/hwholiday/learning_tools/all_packaged_library/base/config"
+	"github.com/hwholiday/learning_tools/all_packaged_library/base/tool"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
-	"time"
 )
 
 func initMongoDb() {

@@ -3,13 +3,14 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"golang.org/x/net/context"
-	"google.golang.org/grpc"
 	"io"
-	"learning_tools/grpc/bidirectional_streaming_rpc/proto"
 	"log"
 	"os"
 	"testing"
+
+	"github.com/hwholiday/learning_tools/grpc/bidirectional_streaming_rpc/proto"
+	"golang.org/x/net/context"
+	"google.golang.org/grpc"
 )
 
 func Test(t *testing.T) {

@@ -1,12 +1,13 @@
 package db
 
 import (
-	"file_storage/base/config"
-	"file_storage/base/tool"
 	"fmt"
-	"github.com/go-redis/redis"
-	"go.uber.org/zap"
 	"time"
+
+	"github.com/go-redis/redis"
+	"github.com/hwholiday/learning_tools/all_packaged_library/base/config"
+	"github.com/hwholiday/learning_tools/all_packaged_library/base/tool"
+	"go.uber.org/zap"
 )
 
 func initRedis() {

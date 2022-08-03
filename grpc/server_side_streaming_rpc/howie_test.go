@@ -1,12 +1,13 @@
 package main
 
 import (
-	"golang.org/x/net/context"
-	"google.golang.org/grpc"
 	"io"
-	pr "learning_tools/grpc/server_side_streaming_rpc/proto"
 	"log"
 	"testing"
+
+	pr "github.com/hwholiday/learning_tools/grpc/server_side_streaming_rpc/proto"
+	"golang.org/x/net/context"
+	"google.golang.org/grpc"
 )
 
 func Test(t *testing.T) {

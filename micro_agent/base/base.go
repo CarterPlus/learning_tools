@@ -1,9 +1,9 @@
 package base
 
 import (
-	"micro_agent/base/config"
-	"micro_agent/base/db"
-	"micro_agent/base/tool"
+	"github.com/hwholiday/learning_tools/micro_agent/base/config"
+	"github.com/hwholiday/learning_tools/micro_agent/base/db"
+	"github.com/hwholiday/learning_tools/micro_agent/base/tool"
 )
 
 func Init(path string) {

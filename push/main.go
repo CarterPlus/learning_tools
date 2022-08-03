@@ -5,7 +5,8 @@ import (
 	"fmt"
 	"net/http"
 	_ "net/http/pprof"
-	"test/push/handler"
+
+	"github.com/hwholiday/learning_tools/push/handler"
 )
 
 var (

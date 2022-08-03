@@ -2,11 +2,12 @@ package hw
 
 import (
 	"fmt"
-	pb "github.com/golang/protobuf/protoc-gen-go/descriptor"
 	"path"
-	"protoc-gen-hw/generator"
 	"strconv"
 	"strings"
+
+	pb "github.com/golang/protobuf/protoc-gen-go/descriptor"
+	"github.com/hwholiday/learning_tools/grpc/protoc-gen-hw/generator"
 )
 
 const (

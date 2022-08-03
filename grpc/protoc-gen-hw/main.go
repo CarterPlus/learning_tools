@@ -1,15 +1,16 @@
 package main
 
 import (
-	"github.com/golang/protobuf/proto"
 	"io/ioutil"
 	"os"
-	"protoc-gen-hw/generator"
-	"protoc-gen-hw/plugin/hw"
+
+	"github.com/golang/protobuf/proto"
+	"github.com/hwholiday/learning_tools/grpc/protoc-gen-hw/generator"
 )
 
 func main() {
-	generator.RegisterPlugin(new(hw.Hw))
+	// generator.RegisterPlugin(new(hw.Hw))
+	generator.RegisterPlugin(nil)
 	g := generator.New()
 	data, err := ioutil.ReadAll(os.Stdin)
 	if err != nil {

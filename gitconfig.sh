@@ -1,2 +1,2 @@
-git config user.name "hwholiday"
-git config user.email "heweiholiday@gmail.com"
+git config user.name "CarterPlus"
+git config user.email "hashcat@126.com"

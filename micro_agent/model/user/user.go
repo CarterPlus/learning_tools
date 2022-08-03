@@ -2,8 +2,9 @@ package user
 
 import (
 	"fmt"
-	user_agent "micro_agent/proto/user"
 	"sync"
+
+	user_agent "github.com/hwholiday/learning_tools/micro_agent/proto/user"
 )
 
 var (

@@ -1,7 +1,7 @@
 package ws
 
 import (
-	"learning_tools/websocket/gateway/msg"
+	"github.com/hwholiday/learning_tools/websocket/gateway/msg"
 	"sync"
 )
 

@@ -2,18 +2,20 @@ package main
 
 import (
 	"flag"
+	"strings"
+	"time"
+
+	user_agent "github.com/hwholiday/learning_tools/micro_agent/proto/user"
+
+	"github.com/hwholiday/learning_tools/micro_agent/base"
+	"github.com/hwholiday/learning_tools/micro_agent/base/config"
+	"github.com/hwholiday/learning_tools/micro_agent/base/tool"
+	"github.com/hwholiday/learning_tools/micro_agent/handler"
+	"github.com/hwholiday/learning_tools/micro_agent/model"
 	"github.com/micro/cli"
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/registry"
 	"github.com/micro/go-plugins/registry/etcdv3"
-	"micro_agent/base"
-	"micro_agent/base/config"
-	"micro_agent/base/tool"
-	"micro_agent/handler"
-	"micro_agent/model"
-	user_agent "micro_agent/proto/user"
-	"strings"
-	"time"
 )
 
 var conf = flag.String("conf", "/home/ghost/go/src/micro_agent/conf", "conf path")

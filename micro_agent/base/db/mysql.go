@@ -2,8 +2,9 @@ package db
 
 import (
 	"fmt"
+
 	"github.com/go-xorm/xorm"
-	"micro_agent/base/config"
+	"github.com/hwholiday/learning_tools/micro_agent/base/config"
 )
 
 func initMysql() {

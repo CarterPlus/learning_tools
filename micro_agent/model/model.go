@@ -1,6 +1,6 @@
 package model
 
-import "micro_agent/model/user"
+import "github.com/hwholiday/learning_tools/micro_agent/model/user"
 
 func Init() {
 	user.Init()

@@ -1,8 +1,8 @@
 package db
 
 import (
-	"file_storage/base/config"
-	"file_storage/base/tool"
+	"github.com/hwholiday/learning_tools/all_packaged_library/base/config"
+	"github.com/hwholiday/learning_tools/all_packaged_library/base/tool"
 	"github.com/minio/minio-go"
 )
 

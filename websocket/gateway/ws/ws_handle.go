@@ -2,7 +2,7 @@ package ws
 
 import (
 	"fmt"
-	"learning_tools/websocket/pb"
+	"github.com/hwholiday/learning_tools/websocket/pb"
 	"time"
 )
 

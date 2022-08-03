@@ -3,14 +3,15 @@ package discovery
 import (
 	"errors"
 	"fmt"
+	"math/rand"
+	"sync"
+	"time"
+
+	"github.com/hwholiday/learning_tools/etcd/register"
 	"google.golang.org/grpc/attributes"
 	"google.golang.org/grpc/balancer"
 	"google.golang.org/grpc/balancer/base"
 	"google.golang.org/grpc/resolver"
-	"learning_tools/etcd/register"
-	"math/rand"
-	"sync"
-	"time"
 )
 
 const VersionLB = "version"
@@ -18,7 +19,8 @@ const VersionLB = "version"
 // NewBuilder creates a new weight balancer builder.
 func newVersionBuilder(opt *Options) {
 	//balancer.Builder
-	builder := base.NewBalancerBuilder(VersionLB, &rrPickerBuilder{opt: opt}, base.Config{HealthCheck: true})
+	// builder := base.NewBalancerBuilder(VersionLB, &rrPickerBuilder{opt: opt}, base.Config{HealthCheck: true})
+	builder := base.NewBalancerBuilder(VersionLB, nil)
 	balancer.Register(builder)
 	return
 }
@@ -46,9 +48,10 @@ func (r *rrPickerBuilder) Build(info base.PickerBuildInfo) balancer.Picker {
 	if len(scs) == 0 {
 		return base.NewErrPicker(balancer.ErrNoSubConnAvailable)
 	}
-	return &rrPicker{
-		node: scs,
-	}
+	return nil
+	// return &rrPicker{
+	// 	node: scs,
+	// }
 }
 
 type rrPicker struct {
